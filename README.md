@@ -1,47 +1,49 @@
 # victor-ai-prototype
-A Python-based AI application prototype using OpenAI API and FastAPI, featuring conversation state management, session handling, and a scalable backend architecture.
-=======
-# Class_one_victor_ai
 
-Class_one_victor_ai is a small FastAPI prototype that uses OpenAI's Responses API to build a simple chat application with conversation state.
+A Python-based AI application prototype built using OpenAI API and FastAPI, featuring conversation state management, session handling, and a scalable backend architecture.
+
+## Overview
+
+This project demonstrates how to build a simple AI-powered chat application using the official OpenAI API and FastAPI.
+
+All core concepts and implementation patterns are based on OpenAI's official documentation:
+https://developers.openai.com/api/docs
+
+The goal is to show that with the available documentation and tools, there is no barrier to building a functional AI application quickly.
 
 ## What is inside
 
 - FastAPI backend
 - Simple HTML + JavaScript frontend
 - In-memory session store for local prototype testing
-- Clear comments in the code
-- .env.example template
-- instructions.txt
+- Clear and structured code
+- `.env.example` configuration template
+- `instructions.txt` for setup
 
 ## Main idea
 
-The app saves the last OpenAI response.id for each session id.
-When the same session sends another message, the app passes that saved id back as previous_response_id.
-That keeps the conversation connected without manually sending the full message history each time.
+The application uses OpenAI's Responses API with `previous_response_id` to maintain conversation state.
 
-## Project structure
+For each session:
+- The app stores the last `response.id`
+- On the next request, it sends that ID as `previous_response_id`
+- This allows the conversation to continue without manually sending full message history
 
+## Run locally
 
-Class_one_victor_ai/
-├── app/
-│   ├── __init__.py
-│   ├── config.py
-│   ├── main.py
-│   ├── models.py
-│   ├── openai_service.py
-│   └── store.py
-├── static/
-│   ├── app.js
-│   └── style.css
-├── templates/
-│   └── index.html
-├── .env.example
-├── .gitignore
-├── instructions.txt
-├── README.md
-└── requirements.txt
+Follow the steps in `instructions.txt` to set up and run the application on your local machine.
 
+You will need:
+- Python 3.9+
+- An OpenAI API key
 
-## Run
-See instructions.txt for step-by-step setup on a local machine.
+After setup, you can run the app and interact with it in your browser.
+
+## Notes
+
+This is a prototype designed for learning and demonstration purposes.  
+It can be extended with:
+- persistent storage (database)
+- authentication
+- deployment to cloud services
+- more advanced AI workflows
