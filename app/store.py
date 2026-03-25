@@ -1,3 +1,10 @@
+# MIT License
+
+# Copyright (c) 2026 Victor
+
+# This file is part of the Class_one_victor_ai project.
+# See the LICENSE file in the project root for full license information.
+
 """Simple in-memory session store for conversation state.
 
 This is fine for local testing and prototypes.

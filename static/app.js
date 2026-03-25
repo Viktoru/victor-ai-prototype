@@ -1,3 +1,10 @@
+// MIT License
+
+// Copyright (c) 2026 Victor
+
+// This file is part of the Class_one_victor_ai project.
+// See the LICENSE file in the project root for full license information.
+
 const victor_sessionIdInput = document.getElementById("victor_session_id");
 const victor_messageInput = document.getElementById("victor_message");
 const victor_sendButton = document.getElementById("victor_send_button");

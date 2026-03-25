@@ -1,3 +1,10 @@
+# MIT License
+
+# Copyright (c) 2026 Victor
+
+# This file is part of the Class_one_victor_ai project.
+# See the LICENSE file in the project root for full license information.
+
 """FastAPI entry point for Class_one_victor_ai."""
 
 from __future__ import annotations

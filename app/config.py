@@ -1,3 +1,11 @@
+
+# MIT License
+
+# Copyright (c) 2026 Victor
+
+# This file is part of the Class_one_victor_ai project.
+# See the LICENSE file in the project root for full license information.
+
 """Application configuration helpers."""
 
 from __future__ import annotations
@@ -13,7 +21,7 @@ load_dotenv()
 
 @dataclass(frozen=True)
 class Victor_AppConfig:
-    """Stores configuration values required by the application."""
+    # """Stores configuration values required by the application."""
 
     victor_openai_api_key: str
     victor_model_name: str = "gpt-4o-mini"
