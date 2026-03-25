@@ -1,7 +1,5 @@
 // MIT License
-
 // Copyright (c) 2026 Victor
-
 // This file is part of the Class_one_victor_ai project.
 // See the LICENSE file in the project root for full license information.
 
