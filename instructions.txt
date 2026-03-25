@@ -1,0 +1,135 @@
+Class_one_victor_ai
+===================
+
+This file explains exactly how to run the project on your local machine and how to upload it to GitHub.
+
+1) What this project does
+-------------------------
+This project is a simple AI chat prototype built with Python, FastAPI, HTML, CSS, and JavaScript.
+It connects to OpenAI through the Responses API.
+It keeps conversation state by saving the last OpenAI response id for each session id.
+
+2) Folder name
+--------------
+The folder name is:
+Class_one_victor_ai
+
+3) Before you start
+-------------------
+Make sure you have:
+- Python 3.10 or newer installed
+- A valid OpenAI API key
+- Git installed if you want to push the project to GitHub
+
+4) Create the local environment
+-------------------------------
+Open a terminal in the project folder and run:
+
+Windows:
+python -m venv .venv
+.venv\Scripts\activate
+
+macOS or Linux:
+python3 -m venv .venv
+source .venv/bin/activate
+
+5) Install dependencies
+-----------------------
+Run:
+
+pip install -r requirements.txt
+
+6) Add your API key
+-------------------
+Copy the example file and create a real .env file.
+
+Windows:
+copy .env.example .env
+
+macOS or Linux:
+cp .env.example .env
+
+Then open the .env file and replace:
+OPENAI_API_KEY=your_openai_api_key_here
+
+with your real key.
+
+7) Run the project locally
+--------------------------
+Run this command from the root project folder:
+
+uvicorn app.main:victor_app --reload
+
+8) Open the app
+---------------
+Open your browser and go to:
+
+http://127.0.0.1:8000/
+
+You can also test the API docs here:
+
+http://127.0.0.1:8000/docs
+
+9) How to use the app
+---------------------
+- Type a session id such as victor-demo-session
+- Type your message
+- Click Send
+- The assistant reply will appear on the page
+- Use the same session id again to continue the same conversation
+- Click Clear Session to reset the saved conversation state for that session
+
+10) How the code is organized
+-----------------------------
+app/config.py
+Loads environment variables and app settings.
+
+app/models.py
+Contains request and response models for the API.
+
+app/store.py
+Stores the latest response id for each session id in memory.
+
+app/openai_service.py
+Sends requests to OpenAI.
+
+app/main.py
+Starts FastAPI, serves the frontend page, and exposes the chat endpoints.
+
+templates/index.html
+Main web page.
+
+static/app.js
+Frontend browser logic for sending and clearing messages.
+
+static/style.css
+Simple page styling.
+
+11) Important note for real production use
+------------------------------------------
+This project uses an in-memory store.
+That means data disappears when the server restarts.
+For a real production system, replace it with Redis, PostgreSQL, or another database.
+
+12) How to upload to GitHub
+---------------------------
+Inside the project folder, run:
+
+git init
+git add .
+git commit -m "Initial commit for Class_one_victor_ai"
+
+Then connect your existing GitHub repository:
+
+git remote add origin YOUR_GITHUB_REPOSITORY_URL
+git branch -M main
+git push -u origin main
+
+13) Final check list
+--------------------
+Before pushing to GitHub, verify these points:
+- .env is not pushed
+- .env.example is included
+- requirements.txt is included
+- instructions.txt is included
+- Your real API key is only inside your private local .env file

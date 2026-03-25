@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ victor_title }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <main class="victor_container">
+        <section class="victor_card">
+            <h1>{{ victor_title }}</h1>
+            <p class="victor_subtitle">
+                Local prototype that sends messages to OpenAI and keeps conversation state by session id.
+            </p>
+
+            <div class="victor_field_group">
+                <label for="victor_session_id">Session ID</label>
+                <input id="victor_session_id" type="text" value="victor-demo-session">
+            </div>
+
+            <div class="victor_field_group">
+                <label for="victor_message">Your message</label>
+                <textarea id="victor_message" rows="5" placeholder="Type your message here..."></textarea>
+            </div>
+
+            <div class="victor_button_row">
+                <button id="victor_send_button">Send</button>
+                <button id="victor_clear_button" class="victor_secondary_button">Clear Session</button>
+            </div>
+
+            <div class="victor_output_group">
+                <h2>Assistant reply</h2>
+                <pre id="victor_output">No response yet.</pre>
+            </div>
+
+            <div class="victor_output_group">
+                <h2>Status</h2>
+                <pre id="victor_status">Waiting for action.</pre>
+            </div>
+        </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
